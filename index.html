@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <title>Happy Eggs Catcher</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index_style.css">
+</head>
+
+<body>
+
+    <div class="container-fluid h-100 overflow-hidden" id="container">
+        <!-- gameBar -->
+        <div id="gameBar">
+            <div>
+                Score : 
+                <span id="score"> 0</span>
+            </div>
+            <div>
+                Life :
+                <span id="life"> 10</span>
+            </div>
+        </div>
+                            <!-- hens & eggs & broken eggs -->
+        <div class="col-sm-8 h-100 m-auto" id="gameContent">
+                            <!-- hens -->
+            <div class="hens">
+                <div id="hen1" class="hen">
+                    <img src="images/Happy_hen.svg" class="w-100">
+                </div>
+                <div id="hen2" class="hen">
+                    <img src="images/Happy_hen.svg" class="w-100">
+                </div>
+                <div id="hen3" class="hen">
+                    <img src="images/Happy_hen.svg" class="w-100">
+                </div>
+            </div>
+                            <!-- Eggs -->
+            <div class="eggs">
+                <div id="egg1" class="egg" data-brokenEgg="1">
+                    <img src="images/Happy_Egg.svg" class="w-100">
+                </div>
+                <div id="egg2" class="egg" data-brokenEgg="2">
+                    <img src="images/Happy_Egg.svg" class="w-100">
+                </div>
+                <div id="egg3" class="egg" data-brokenEgg="3">
+                    <img src="images/Happy_Egg.svg" class="w-100">
+                </div>
+            </div>
+                            <!-- broken eggs -->
+            <div class="brokenEggs">
+                <div id="brokenEgg1" class="brokenEgg  d-none">
+                    <img src="images/Broken_Egg.svg" class="w-100">
+                </div>
+                <div id="brokenEgg2" class="brokenEgg d-none">
+                    <img src="images/Broken_Egg.svg" class="w-100">
+                </div>
+                <div id="brokenEgg3" class="brokenEgg d-none">
+                    <img src="images/Broken_Egg.svg" class="w-100">
+                </div> 
+            </div>                         
+        </div>
+                            <!-- play & game over -->
+        <div class="col-md-6 d-flex justify-content-center m-auto">
+            <div id="startGame" class="text-center w-50 position-fixed">
+                <h1>HAPPY EGGS</h1>
+                <button id="play">Play</button>
+            </div>
+            <div id="gameOver" class="text-center w-50 position-fixed d-none">
+                <h1>HAPPY EGGS</h1>
+                <h2 id="gameScore"></h2>
+                <button id="playAgain">Play Again</button>
+            </div>
+        </div>
+                            <!-- basket -->
+        <div id="basket">
+            <span id="basketScore"></span>
+        </div>
+                            <!-- the floor -->
+        <div id="floor"></div>
+                            <!-- game sounds effect -->
+        <audio id="playMusic" src="sounds/chicken_alarm.mp3" loop="loop"></audio>
+        <audio id="gameOverMusic" src="sounds/game over.mp3"></audio>
+        <audio id="scoreMusic" src="sounds/score_effect.mp3"></audio>
+        <audio id="crackEggMusic" src="sounds/egg-crack.mp3"></audio>
+
+    </div>
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
